@@ -10,33 +10,58 @@ public class Calculator {
         System.out.println("Welcome.");
 
         String input = "";
+        
 
-        int num1, num2;
-        String symbol;
-    
         //Operator operators = new Operator();
         
         Scanner scanner = new Scanner(System.in);
 
         List<String> $last = new ArrayList<>();
        
-        while(!input.equals("exit")) {
+      
+        int num1 = scanner.nextInt();
+       
+        String symbol = scanner.next();
+
+        int num2 = scanner.nextInt();
+
+        int result;
+
+        input = scanner.nextLine();
+        while (input.equals("exit")) {   
+
             System.out.print("> ");
+        
+            switch (symbol) {
+                case "+":
+                result = num1 + num2;
+                System.out.println(result);
+                break;
 
-            if(scanner.hasNextInt()) {
-            num1 = scanner.nextInt();
+                case "-":
+                result = num1 - num2;
+                System.out.println(result);
+                break;
 
-        } else if(scanner.hasNext()) {
-            symbol = scanner.next();
+                case "*":
+                result = num1 * num2;
+                System.out.println(result);
+                break;
 
-        } else if(scanner.hasNextInt()) {
-            num2 = scanner.nextInt();
+                case "/":
+                result = num1 - num2;
+                System.out.println(result);
+                break;
+            } 
 
-        } else {
-            System.out.println("Values keyed wrongly,input in order: 'num space operator space num'");
-
-        }
-    }   System.out.println("Bye bye");
-
+        }  
+            
     }
+            
+            
 }
+            
+  
+
+
+
