@@ -16,9 +16,8 @@ public class Calculator {
         Scanner scanner = new Scanner(System.in);
 
         List<Integer> store = new ArrayList<>();
-       
         
-        while(input != null) {
+        while(!input.startsWith("exit")) {
         
         System.out.print("> ");
         
@@ -28,13 +27,12 @@ public class Calculator {
 
         int num2 = scanner.nextInt();
 
+        String cue = scanner.nextLine();
+
         int result;
-        
-        String cue;
 
-        input = scanner.nextLine();
 
-        if (!input.equals("exit")) {
+        if (input != null) {
             switch (symbol) {
                 case "+":
                 result = num1 + num2;
@@ -60,14 +58,13 @@ public class Calculator {
                 System.out.println(result);
                 break;
             
+                } 
+
             } 
-
-            } else {
-            System.out.println("Bye bye");
-
-            }
         
-        } 
+        }
+      
+        System.out.println("Bye bye");
             
     }
             
